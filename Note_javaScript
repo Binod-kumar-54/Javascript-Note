@@ -191,3 +191,144 @@ Practice Questions :
     };
     console.log(profile.followers);
     console.log(typeof(profile['bio']));// checking the type of key inside the object 
+
+
+|--------------------------------------------------|
+| Chapter 3 Operator and Conditional Statement  :  |
+|--------------------------------------------------|
+
+Comments in js :
+---------------
+    // This code prints hello world  single line comment 
+    /*This is the code 
+    which prints hello world */ Multiline comment 
+
+Operator In JS:
+----------------
+    used to perform some operation on data
+    type :
+        Arithmetic operator , Asignment operator  
+
+    Arithmetic operator :
+    ---------------------
+        ( +,-,*,/ )
+
+        a + b (Expression )
+        here a and b are operands 
+        + is a operator here 
+
+        example Code :
+        // Arithmetic operator 
+        let a = 5;
+        let b = 3;
+        console.log("a = ",a," &  b = ",b);
+        console.log("a + b = ",a + b);
+        console.log("a - b = ",a - b);
+        console.log("a x b = ",a * b);
+        console.log("a / b = ",a / b);
+
+        Modulus : (%)
+------------------------------------- 
+            it is the operator which devide the operands and prints the reminder 
+        lets example 5 % 2 = 1 because the reminder is 1
+
+        console.log("a % b = ",a % b);
+
+        Exponentiation :
+--------------------------------------
+            console.log("a ** b = ",a ** b); // a to the power b means 5 to the power 3 = 5 * 5 * 5 = 125 
+
+In js we have two unary operator : ( increment , Decrement ) :
+    unary operator means the oprator which takes only one operands 
+
+        Incriment :(++) (post):
+            it will print first then it will change the value from the next line  
+-----------------------------------------
+        if i write  a++ means  a + 1 
+                    a-- means  a - 1
+        
+        code Example :
+            console.log("a = ",a," &  b = ",b);
+            // a = a + 1; (Uncomment the commented part and try )
+            a++
+            a--
+            console.log(" a = ",a)
+        
+        code example 2:
+            let a = 5;
+            let b = 3;
+            console.log("a = ",a," &  b = ",b);
+            console.log("a++ = ",a++); //5
+            console.log("after incrementing the value of a = ",a); //6
+
+        two way we can declare ++ like 
+        -> a++ ( we have seen before) ( called Post Increment )
+        -> ++a ( valid ) ( called pre Incriment )
+        same for the minus (- like a--,--a , called post decrement , post decrement )
+
+        ++a :(preincrement ):
+        ---------------------
+            it will first change the value then prints
+            code Example :
+            let a = 5;
+            let b = 3;
+            console.log("a = ",a," &  b = ",b);
+            console.log("++a = ",++a); 
+
+            same for derement :
+            pre decrement :
+            --------------
+            code Example :
+                let a = 5 ;
+                let b = 3;
+                console.log("a = ",a," &  b = ",b);
+                console.log("--a = ",--a);
+                console.log("after incrementing the value of a = ",a);
+
+            post decrement :
+            code Example:
+                console.log("a = ",a," &  b = ",b);
+                console.log("a-- = ",a--); 
+                console.log("after incrementing the value of a = ",a);
+
+    Assignment Operator :
+    ----------------------
+    =   +=   -=   *=   %=   **=  /=
+
+    ( = ) : operator :
+    -------------------
+    it asign the value left = right , right value store in left variable 
+
+    += ( operator ):
+    ------------------
+    code example :
+
+    let a = 5;
+    let b = 3;
+    a += 4 ; // a = a + 4
+    console.log("a = ",a);
+
+    like this all 
+    
+    code Example :
+
+        let a = 5;
+        let b = 3;
+
+        // a += 4 ; // a = a + 4
+        // console.log("a = ",a);
+
+        // a -= 4 ; // a = a - 4
+        // console.log("a = ",a);
+
+        // a *= 4 ; // a = a * 4
+        // console.log("a = ",a);
+
+        // a /= 4 ; // a = a / 4
+        // console.log("a = ",a);
+
+        // a %= 4 ; // a = a % 4
+        // console.log("a = ",a);
+
+        a **= 4 ; // a = a ** 4
+        console.log("a = ",a);
