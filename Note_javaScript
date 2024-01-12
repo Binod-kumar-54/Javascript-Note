@@ -1,0 +1,193 @@
+What Is JavaScript :
+    js is a open source object oriented programming language .which is used for making the webpage dynamic
+    advantages :
+        -> javascript is a Dynamic typed language (we dont define variable as which type explicitly like in c and java etc)
+        -> Saves time and bandwidth: Regardless of where you host JavaScript, it always gets executed on the client environment to save lots of bandwidth and make the execution process fast.
+        -> Reduce load on the server :  Data validation can be done within the browser itself rather than being forwarded to the server 
+
+
+
+    input -------> Computer ---------> output 
+    
+
+JavaScript can be written inside console whic is present inside the browser 
+    there we can write console.log("hello javascript");
+
+    or the best option create a js folder and write javascript inside a file extension name should be .js
+    and create an other file in the same location as . html extension then link the js file to the .html file and run the .html file in the browser
+______________________________________________
+Chapter 2 :                                   |
+______________________________________________|
+
+    ( Variable )
+-----------------------
+    Variable are container for the data , where we can keep our data it could be change later 
+    we can give variable name as or wish but as a good programer our variable name should be meaningful 
+
+
+    difference between null and undefined :
+        undefined : dont know what is inside the container.
+        null : the container is empty but we know the container is empty
+
+    rule for define variable:
+    -------------------------   
+        -> javascript variable are case sensitive: "a" and "A" is different
+            apple is differnt from Apple
+        -> Only letter ,digit,$ and underscore (_) are allowed (not even a space )
+        -> Only letter , digit , $ or underscore(_) should be first letter of variable
+        -> reserved words cant be variable name .
+
+        one Convension :
+            camelCase :
+                like : fullName , lastName ,isFollow, totalPrice  etc 
+
+    we cant always  declare variable in this form of age = 45 not like this .
+    we can use var , let , const keyword
+
+    -> var variable can be declared and updated . it is a global scope variable 
+
+        var age  = 22
+        var age =45
+        var age = 67
+        console.log(age)
+        here we can re-declarea and update 
+    -> let : variable cant be re-declared but can be updated . A block scope variable 
+
+        let age  = 66
+        age = 77
+        console.log(age)
+        here we ant re-declare but we can update the same variable 
+
+        {
+            let a = 5 ;
+            console.log(a);
+        }
+        {
+            let a = 10;
+            console.log(a);
+            }
+
+    -> const : variable cannot be re-declared or updated . A block scope variable
+        const age  = 66 ;
+        // age = 88;
+        console.log(age);
+        it cant be re-declare or update 
+
+    before 2015 we are using var keyword but after ES6 (ekma script 6) came to market  from there let and const came 
+
+    let a ;
+    console.log(a)
+
+    if you defined a vriable didnot stored anything bydefault it will consider as undefined 
+
+    but not the same with const keyword 
+    const a ;
+    console.log(a)
+    you will get an error message 
+
+        right form you have to initialize the const variable at the time of declaration 
+
+
+
+
+    __________________________
+    | Chapter 3 --> DataType :|
+    |_________________________|
+
+        Number ,String , Boolean, undefined , Null , Bigint , Symbol
+
+        Primitive :
+            7 datatype are present :
+            Number ,String , Boolean, undefined , Null , BigInt , Symbol
+
+            let age = 24;  //number 
+            price = 66.89;  //number 
+            discount = -4;  //number 
+            fullName = " Tony Stark" ; //string 
+            isFollow =true; //Boolean
+            let area  ; //Undefined ( where the value is not defined )
+            let x = null; // object ( there should be a object but now it is null)
+            let b = BigInt("123"); // bigint //output will come like "123n"
+            let y = Symbol("hello") //symbol
+
+        NonPrimitive : objects --> (aray and function)  
+            object : it is a collection of values
+                if you want to store stuent information
+                    like name = string type 
+                        age = number type 
+                        marks = number type 
+                        isPass = boolean type 
+
+                        it represent {
+                                age : 23
+                                name : "Binod"
+                        }
+
+                        generally we define object in const example : 
+                        const Student = {
+                            fullName : "Rahul Kumar",
+                            age : 23,
+                            cgpa : 8.2,
+                            isPass : true
+                        };
+                        console.log(Student)
+                        if you want to print the name of Student 
+                        console.log(Student['fullName'])
+                        console.log(Student.fullName)
+
+    example :
+        fullName = "Rahul Kumar";
+        here fullName is key and Rahul Kumar is value
+        in js we have two way to access the keys   
+            -> object.keyname
+            -> object['keyname']
+
+            -> Student.fullName
+            -> Student['fullName']
+
+    To modify or Update the value of any key we can do like this 
+        example :
+            const Student = {
+                fullName: "Rahul Kumar",
+                age: 23,
+                cgpa: 8.2,
+                isPass: true
+            };
+            Student['age'] = Student['age'] + 1;
+            Student['fullName'] = "Binod Kumar";
+            console.log(Student.age);
+            console.log(Student.fullName);
+
+
+
+            
+
+    we cant change the variable which declared wth const keyword but inthe case of object we can change the keys inside the object which is declared with const keyword 
+
+
+
+Practice Questions :
+-----------------------
+1. Create a const object called "product" to store the information.
+
+    const product = {
+        title : "Ball Pen",
+        rating : 4,
+        offer : 5,
+        price : 270
+    };
+    console.log(product.title);
+    console.log(product.rating);
+    console.log(product.offer);
+    console.log(product.price);
+
+2. Create a const object called 'profile' to store information.
+    const profile = {
+        userName : "Binod Kumar Kar",
+        bio : " Student , Vollyball player ",
+        posts : 186,
+        following : 36,
+        followers : 39
+    };
+    console.log(profile.followers);
+    console.log(typeof(profile['bio']));// checking the type of key inside the object 
