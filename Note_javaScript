@@ -157,9 +157,6 @@ ______________________________________________|
             Student['fullName'] = "Binod Kumar";
             console.log(Student.age);
             console.log(Student.fullName);
-
-
-
             
 
     we cant change the variable which declared wth const keyword but inthe case of object we can change the keys inside the object which is declared with const keyword 
@@ -332,3 +329,362 @@ In js we have two unary operator : ( increment , Decrement ) :
 
         a **= 4 ; // a = a ** 4
         console.log("a = ",a);
+
+
+Comparision operator :
+-----------------------
+    -> equal to ==
+    -> not equal to !=
+    -> equal to and type ===
+    -> Not equal&type !==
+    > , >= , < , <= 
+
+    it compare the values of two variable
+     
+     == ( equal to ) : 
+     --------------------
+     it compare the value is equal to other value or not if equal it return true  
+     code example :
+        let a = 5;
+        let b = 3;
+        console.log("5 == 3 ",a==b);
+    
+    != (not equal to ):
+    ----------------------
+        it check the two value are equal or not if equal it return false  
+        console.log("5 != 5",5 != 5 );
+        console.log("5 != 2",5 != 2 );
+
+    === equal to & type :
+    --------------------
+    let a = 5; // number 
+    let b = "5";//string ---> number 
+
+    console.log("a == b ",a==b);
+    // it is showing the true because the javascript converts this string 5 to number 5 and then checks.
+
+
+    but there are some case we dont want that string and number compare equally that time this we use stricter version of equal to ("===") operator came to action .
+
+    -> it checks the datatype of the variable
+
+    code example:
+        let a = 5; // number 
+        let b = "5";//string 
+
+        console.log("a === b ",a===b); //false
+        // it checks datatype as well a jas number data and b has string data so they both are not equal .
+
+    >,>= <,<=
+    -----------
+        code example :
+            let a = 5;  
+            let b = 3;
+            let c = 5
+
+            console.log("a < b ",a < b); 
+            console.log("a > b ",a > b); 
+            console.log("a <= b ",a <= c); 
+            console.log("a >= b ",a >= b); 
+
+
+
+Logical Operator:
+------------------
+    -> logical AND &&
+    -> Logical OR ||
+    -> Logical NOT !
+
+    its outcome always in true or false .
+
+    logical AND &&;
+    -------------- 
+    if we have two condition one is true and condition two is also true  the final answer will true other wise it will return false 
+
+    code example :
+        // Logical AND &&
+
+        let a = 6;
+        let b= 5;
+
+        let cond1 = a > b ; //true 
+        let cond2 = a === 6 ; //true 
+
+        console.log(cond1 && cond2)    
+
+    code example 2 :
+        // Logical AND &&
+
+        let a = 6;
+        let b= 5;
+
+        let cond1 = a > b ; //true 
+        let cond2 = a == 5 ; //true 
+
+        console.log(cond1 && cond2) 
+
+        Table : Logical AND && 
+
+            cond_1          cond_2          final output
+            -------         ------          --------------
+            true            true            true
+            true            false           false
+            false           true            false 
+            false           false           false
+
+
+
+    Loical OR ||: this symbol called pipein our keyboard
+    --------------
+        if any condition became true then it will return true .
+
+        Table :
+
+        cond_1          cond_2          final output
+            -------         ------          --------------
+            true            true            true
+            true            false           true
+            false           true            true 
+            false           false           false
+
+        code example :
+
+        let a = 6;
+        let b= 5;
+
+        console.log(" condition1 || condition2 " , a < b || a === 6);
+        console.log(" condition1 || condition2 " , a < b || a === 8);
+
+    Logical Not (!):
+    -----------------
+        if the condition is true then it will make it false
+        and viceversa
+
+        code example:
+            let a = 6;
+            let b= 5;
+
+            console.log("6 < 5 ",!(a < b) );
+            // 6 is lessthan 5 is false statement but ! makes it true 
+
+
+
+Conditional Statement :
+-------------------------
+    To Implement some condition in the code 
+
+    if statement ,
+
+    if statement :
+    --------------
+    Syntax: ( syntax means rule )
+        if ( condition){
+            code 
+        }
+
+        if the statement is true then the code inside the block will get execute otherwise it will not 
+
+        code example :
+            let age = 18;
+            if (age >= 18 ){
+                console.log("you can vote ");
+            }
+            if (age < 18 ){
+                console.log("you cant vote ");
+            }
+        
+        code example 2:
+            let mode = "dark";
+            let color ;
+            if (mode === "dark"){
+                color = "Black";
+            }
+            if (mode === 'light'){
+                color = "White";
+            }
+            console.log(color)
+
+    if else statement :
+    ------------------
+        Syntax :
+            if (condition){
+                code 
+            } else{
+                code 
+            }
+        
+    if the statement is true then if block will get execute otherwise the else block will get execute 
+
+    code example :
+        let mode = "light";
+        let color ;
+        if (mode === "dark"){
+            color = "Black";
+        } else{
+            color = "white"
+        }
+        console.log(color)
+
+    code example 2 :
+        let age = 29;
+        if (age >= 18){
+            console.log("vote");
+        }
+        else{
+            console.log("cant vote ");
+        }
+
+Q. write a program to check the number is odd or even :
+
+    let number = 21 ;
+    if (number % 2 == 0 ){
+        console.log(number ," is an even number ");
+    }
+    else{
+        console.log(number ," is an odd number ");
+    }
+
+    else if statement:
+    -------------------
+        Some time we have to check the morethan two condition that time else if came to action 
+
+        code example :
+            let age = 43;
+            if (age < 18 ){
+                console.log("Minor");
+            } else if (age >= 60 ) {
+                console.log("Senior");
+            } else{
+                console.log("adult");
+            }
+        code example 2 :
+        --------------
+            let mode = "dark";
+            let color ;
+            if (mode === "dark" ){
+                color = "black";
+            } else if (mode === "blue"){
+                color = "blue";
+            }else if ( mode === "pink"){
+                color = "pink";
+            }
+            else{
+                color = "white";
+            }
+
+            console.log(color)
+
+            if (mode === "dark"){
+                console.log(mode)
+            }
+
+    Ternary operator :
+    ------------------
+    -> it is the special operator which takes three input from them one is condition other two are output 
+
+    -> it is the alternate way to write if else statement.
+    -> Syntax :
+            condition ? true output : false output 
+            or
+            condition ? if block : else block
+
+        code example :
+            let age = 18;
+            age >= 18 ? console.log("adult") : console.log("minor") ;
+
+            let age = 18;
+            let result = age >= 18 ? "adult" : "minor";
+            console.log(result)
+
+_____________________________________________________________
+IMPORTANT :
+
+    MDN Docs :
+    ---------
+        it is the documentation written by the developer of mozila 
+        inside the website there is free documentation for css , HTML, javascript , you can take as reference 
+
+        link :  https://developer.mozilla.org/en-US/
+
+        or you can simple search mdn docs in google you will find the "MDN Web Docs"
+_____________________________________________________________
+
+except the ifelse we have another way to check the conditions 
+that is :
+
+    Switch Case :
+    -------------
+        Syntax :
+            Switch (condition){
+                case :
+                    code
+                    break;
+            }
+
+
+        code example :
+            let Item = "Pumpkins";
+            switch (Item){
+                case "Oranges":
+                    console.log(" Oranges are 74.56 rupees per kg ");
+                    break;
+                case "Mangos":
+                case "Papayas":
+                    console.log("Mangos and Papayas are 34.23 rupees per kg ");
+                    break;
+                default:
+                    console.log("Sorry, We are out of ",Item)
+            }
+    
+    prompt and alert 
+    ----------------
+        alert :
+        ---------
+            gives us one time popup message 
+        code example :
+            alert("hello"); // one time popup
+
+        prompt:
+        --------
+        ->    it gives you the message, but along with message it can take input also and we can store that input in a variable.
+
+        -> it is the temporary way to take input from the user.
+
+        code example :
+            let fullName = prompt ( "hello");
+            console.log(fullName);
+
+
+Practice Question :
+    Q1 : Get User to input the number using prompt ("Enter a number: "), check the number is multiple of 5 or not ?
+
+    code example:
+        let number = prompt("Enter a number : ");
+        if (number % 5 === 0 ){
+            console.log('Yes ,', number ,'is multiple of five');
+        } else {
+            console.log('No ,', number ,'is not multiple of five');
+        }
+    
+    Q2 : Write a program which can give grades to student according their score .
+        90 - 100  Grade A
+        70 - 89  Grade B
+        60 - 69  Grade C
+        50 - 59  Grade D
+        0 - 49  Grade F
+
+    code example:
+        let score = prompt("Enter Student Score [0 to 100]: ");
+        let grade ;
+        if (score >= 90 && score <= 100){
+            grade = "A";
+        } else if (score >= 70 && score <= 89){
+            grade = "B";
+        } else if (score >= 60 && score <= 69){
+            grade = "C";
+        } else if (score >= 50 && score <= 59){
+            grade = "D";
+        } else if (score >= 0 && score <= 49){
+            grade = "F";
+        }
+        console.log('According to Your score your grade is ',grade);
