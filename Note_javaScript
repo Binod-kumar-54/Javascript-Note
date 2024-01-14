@@ -688,3 +688,144 @@ Practice Question :
             grade = "F";
         }
         console.log('According to Your score your grade is ',grade);
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+__________________________|
+Chapter 4 Loop and String |
+__________________________| 
+
+    Loops :
+    -------
+        Loops are used to execute a piece of code again and again 
+
+    for Loop :
+    ------------
+        Syntax :
+            for ( initialization ; condition ; increment or decrement )
+            {
+                code 
+            }
+    Understand the loop in a example :
+
+    suppose you have a task to print your name 5 times in the screen , now what you will do ,
+    you will write console.log("your name ");
+    like this you will copy it 5 times but if you have to print the name for 10000 times then it is quite hard to copy all this for 10000 times in this case 
+    loop plays important role .
+
+    when the for loop condition get false the the loop terminate then and there 
+
+    code example:
+    ----------------
+        let fullName = "binod kumar";
+        for (let count = 1 ; count <= 10 ; count++){
+            console.log(fullName);
+        }
+        console.log("loop has ended ");
+
+    code example :
+    ----------------
+        write a code for calculate the sum of 1 to 10 :
+
+        let sum = 0 ;
+        for (let number = 1 ; number <= 10 ; number++){
+            sum += number ; // sum = sum + number ;
+        }
+        console.log("sum of 1 to 10 is ",sum);
+
+        here if you want to print the number outside of the loop then it will show you an error because the variable number declared by let keyword inside the loop , thus it is limited inside the loop only ,
+        incase if you declare number with var variable thenit become global , you can access anywhere in that file .
+
+
+    Infinite Loop : A loop that never ends.
+    ---------------------------------------
+        when the stoping condition never false then it become Infinite loop 
+
+        you should never try !
+
+    While loop :
+    -------------
+        Syntax :
+            while (stopping condition){
+                code 
+            }
+
+        code example :
+
+            let number = 1 ;
+            while (number <=5 ){
+                console.log(number);
+                number += 1;
+            }
+
+    do while loop :
+    --------------
+        Syntax :
+            do {
+                code 
+            }while(condition);
+
+    there is a guarenty that the dowhile loop run atleast onetime 
+    because we are writing the  stopping code at the end of loop
+
+    code example:
+        let number = 10;
+        do {
+            console.log(number);
+            number -= 1;
+        }while(number >= 0);
+    
+
+    for of loop :
+    -------------
+        Syntax :
+            for(let val of strVar){
+                //code 
+            }
+
+        it helps us to iterate on some special datatype (Strings and array ).
+        code example :
+            let fullName = "Binod";
+            for(let i of fullName){ // iterator --> character
+                console.log(i);
+            }
+
+        code example :
+            calculate   the length of a string ?
+
+            let fullName = "Binod";
+            let size = 0 ;
+            for(let i of fullName){
+                console.log(i);
+                size += 1 ;
+            }
+            console.log("String length is : ",size);  
+
+    for in loop .
+    --------------
+    Syntax:
+        for ( let key in objVar){
+            // code 
+        }
+
+    code example :
+        let Student = {
+        name : "binod",
+        age : 24,
+        cgpa : 7.8,
+        ispass : true,
+    }
+
+    for ( let key in Student){
+        console.log(" Keys : ",key, "value : ",Student[key]);
+    }
+
+Practice Question :
+-------------------
+Q1. Print all the evan number from 0 to 100.
+
+    for (let i = 0 ; i <= 100 ; i++){
+    if (i % 2 == 0){
+        console.log(i);
+        }
+    }
+
