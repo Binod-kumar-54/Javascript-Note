@@ -829,3 +829,131 @@ Q1. Print all the evan number from 0 to 100.
         }
     }
 
+Q2 create a game where you start with any random game number 
+Ask the user to keep guessing the number until the user enters the correct value 
+
+codeexample:
+    let cnumber = Math.floor(Math.random() * 10);
+    let usernumber = prompt("Enter a number from 0 to 10");
+    while(usernumber != cnumber){
+        usernumber =prompt("Wrong !!")
+    }
+
+
+String in js :
+----------------
+string is a sequence of character used to represent text
+ex :
+    let st = "hello i am Binod ";
+
+code Example:
+    let st = " hello india ";
+    let str2 = 'hello usa';
+    console.log(st,str2);
+
+Strings has some inbuilt properties and some inbuild functions 
+
+inbuild function are called as methods.
+
+some inbuilt properties :
+    -> length :
+        syntax :
+            string variable.length
+        code example :
+            let st = " hello india ";
+            let str2 = 'hello usa';
+
+            console.log(st,str2);
+            console.log(st.length);
+
+    accessing the individual element of a string element .
+    -------------------------------------------------------
+    ex:    string [position]
+
+        string index starts from the 0 goes to string.length-1
+
+        //strings
+
+        let st = " hello india ";
+        let str2 = 'hello usa';
+
+        console.log(st,str2);
+        console.log(st.length);
+        console.log(st[0]);
+
+    Template literls in js :
+    ---------------------------
+        A way to have embedded epression in the string 
+        //template leterals 
+        let sentence = ` this is a template literals `;
+        // this is a special string 
+        console.log(sentence);      
+
+        there is a question arise that if we can create a stirng using single and double quote why there is need to create a string like using backtic ?
+
+        code example :
+            let obj = {
+            item : "pen",
+            price : 23
+        }
+
+        console.log("the cost of ",obj.item,"is ",obj.price);
+
+        // using backtic 
+
+        console.log(` the cost of ${obj.item} is ${obj.price}`); 
+
+
+    String interpolation :
+    --------------------------
+        to create a string by doing substitution of placeholder 
+
+        Syntax:
+            ` string text ${Expression} string text` 
+        code example :
+            num1 = 23;
+            num2 = 34;
+            console.log(`the addition of  num1 and num2 is ${num1 + num2}`);
+
+    escape character 
+    ----------------------
+    \n is used to make anothe line form the single line 
+    \t -> gives you the tab space 
+
+    but it doesnot count in the string length method
+    num1 = 23;
+    num2 = 34;
+    console.log(`the addition of \n num1 and num2 is ${num1 + num2}`);
+
+
+    String Methods (functions) :
+    ----------------------------
+        This is a builtin function to manupulate a sring 
+        -> str.toUpperCase()
+        -> str.toLowerCase()
+        -> str.trim() // remove whitespaces from both right and left side  
+
+        String is a immutable ( cant change )
+
+    code example :
+        //String Methods :
+
+        //str.toUpperCase();
+
+        str = "hello Binod ";
+        str2 ="            binod     kumar     kar       "
+        upper = str.toUpperCase();
+
+        console.log(upper);
+
+        //str.toLowerCase();
+
+        console.log(str.toLowerCase());
+
+        // str.trim();
+
+        console.log(str2.trim(), `length of string is : ${str2.length}`);
+
+
+
+
