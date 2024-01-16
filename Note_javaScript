@@ -956,4 +956,81 @@ some inbuilt properties :
 
 
 
+    str.slice(start,end)// return part of string 
+    -----------------
+    code example:
+        let str = "012345";
+    console.log(str.slice(2,6));
+
+    here ending index number is optional if you wont give the last index number it will count from the given index number to till last .
+
+    Concatination :
+    ----------------
+    str.concat(str2); // str2 with str
+    code example:
+        let fname = "binod ";
+        let lname = "Kumar";
+        console.log(fname.concat(lname));
+        console.load(fname + lname );
+    
+    this the concat function which doing the concatination between two string but in javascript we can 
+    concatinate thr two string using + operator 
+
+    let res = fname + 123;
+    console.log(`resut of adding number to the string is : ${typeof(res)} and the result is ${res}`);
+
+    if we add number to the string it will become string 
+
+    Replace methods
+    ------------------
+    str.replace(searchVal , newVal)
+        if i have writen a tring abcdefg and i want to search the value cde and i want to replace cde to xyz the the replace method came to action 
+
+    code example
+        let st = "hello";
+        console.log(st.replace("h","m"));
+        console.log(st.replace("llo",123));
+        console.log(st.replace("hello","come here "));
+
+    charAt method
+    -----------------
+        str.charAt(idx);
+        -> idx ----> index number
+    if you want to findout or return the perticular index value . 
+
+    code example :
+        let st = "hello";
+        console.log(st.charAt(0));
+
+    if you want to do any changes in original string 
+    then you have to create a new string without creating new string you cant change any value 
+    because string are immutable 
+
+    code example
+        let st = "hello";
+        st[0] = 6;
+        console.log(st); // it wont change to 6ello
+
+        to do same 
+
+        code example :
+            let st = "hello";
+            st = st.replace("h",6);
+            console.log(st);
+
+
+    
+    String practice Question :
+    -----------------------------
+    Q1. Prompt the user to enter their name .Generate a user name for them based on the input.
+    start user name with @ , followed y their fullname and ending with the full name length .
+
+    eg : user name = "binodkumar", username should be @binodkumar10   
+
+    code solution :
+        let fullName = prompt ("Enter your full name without spaces ");
+        let username = "@" + fullName + fullName.length;
+        let username2 = `@${fullName}${fullName.length}`;
+        console.log(username2);
+        console.log(username);
 
