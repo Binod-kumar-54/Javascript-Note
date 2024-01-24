@@ -1600,6 +1600,7 @@ best definition of map :
 
 
 Filter method :
+---------------------
     create a new array of element that gives true for condition filter
     eg: all even number 
 
@@ -1728,3 +1729,344 @@ code solution :
     let product = arr.reduce(retProduct);
 
     console.log("factorial = ",product);
+
+
+chapter 6 :
+------------------------
+DOM in javascript :
+-----------------------
+
+
+DOM : Document Object Model 
+
+lets understand about the web dev 
+HTML , CSS, Javascript 
+
+-> html : gives the structure 
+-> css : makes our page beautiful , give style to our structure 
+-> javascript :   logic , makes our page functionable , dynamic 
+
+Window Object :
+-----------------
+the window object representas an open window in browser . it is browsers object (not javascripts)
+and it is automatically created by the browser 
+
+it is a global object with lot of properties an methods.
+
+example of window object :
+    console.log()
+we can write windows.console.log();
+
+    alert ();
+    prompt();
+
+we can write windows.alert();
+
+
+What is DOM :
+---------------
+    when a web page loaded , the browser creates a document object model of the page 
+
+console.log() -> print 
+console.dir() -> it will print the document object method and property
+
+DOM Structure :
+    window ---> document --> html--> 
+
+    html devide with body and head 
+
+    head --> meta 
+    head --> meta 
+    head--> title
+    head --> link
+
+    body--> div 
+    body --> script 
+
+    without using html or css in javascript if you want change the background color of body using javascript 
+
+    document.body.style.background = "green";
+    this changes the background color of body 
+
+    at the run time if we change the document it is called dynamic change to achive this we use DOM
+
+    DOM Manupulation :
+    --------------------
+        Selecting with id 
+            document.getElementById("myid");
+
+        selecting with class :
+            document.getElementByClassName("myclass);
+
+        selecting with tag 
+            document.getElementByTagName("p");
+
+        Query selector :
+            document.querySelector("myid/mycalss/tag");
+
+    selecting with id :
+    -------------------
+        id should be unique .
+        document.getElementById('myid');
+
+        code example :
+        in html document create a h1 tag and give the id name as heading_text like this 
+
+            let heading = document.getElementById('heading_text');
+            console.log(heading);
+
+        if the id doesnot present the it come as null;
+
+        
+    selecting with class name :
+    -----------------------------
+        if we have to make same modification in multiple element we can use class insted of assigning different id name to multiple element .
+
+        class could be same in multiple element.
+
+        code example :
+        let heading_class = document.getElementsByClassName('same');
+        console.log(heading_class);
+        -> it return html collection very similar to array it has index
+            it has length 
+
+        if the calass name doesnot esixt then it return the html collection with 0 length 
+
+
+    Selecting with tag name :
+    ---------------------------
+        code example :
+            let paras = document.getElementsByTagName('p');
+            console.log(paras);
+
+
+        
+    querySelector :
+    ----------------
+        it return the first element of the given id or class or tag
+        suppose we have two paragraph tag and i am using querySelector the i will get the element of the first occurance paragraph 
+
+        code example :
+            let firstElement = document.querySelector('p');
+            console.log(firstElement);
+
+    querySelectorAll :
+    -------------------
+        it return all the element present in the html document respected to id or classname or tag name given 
+
+        code example:
+            let allElement = document.querySelectorAll('p');
+            console.log(allElement);
+
+        it rerturn node list ;
+            node is the indivisual thing in DOM tree 
+
+        in above example we are taking tag name as querySelector argument now we take class name
+
+        -> when using calss name "." must use before the class name 
+        . represent class 
+
+        code example:
+            let allElementClass = document.querySelectorAll('.myclass');
+            console.log(allElementClass); 
+
+        when using id in queryselector put '#' before id name 
+
+        code example:
+            let button = document.querySelector("#button-id");
+            console.log(button);
+
+
+    Properties :
+    ----------------
+    -> we can get, set , update , change the property of element using dom manupulation 
+    
+    ->tagName : return tag for element node 
+    -> innerText : return the text content of the element and all its children 
+    -> innerHTML : return the plain text  or HTML content in the element .
+    -> textContent : return all textual content even for hiden element 
+
+
+    all node has 
+        first child property :
+    
+        last child propery :
+
+        children : console.log(document.querySelector('body').children);
+
+
+
+    tag name :
+    -----------------
+        code example:
+            let button = document.querySelector("#button-id").tagName;
+            console.log(button);
+
+    innerText:
+    --------------
+        console.log(document.querySelector('div').innerText);
+
+        it display all the text content inside the tag despite there is multiple tag inside the tagname 
+    
+    innerHTML :
+    ---------------
+        it display all element text content including html content also 
+
+        console.log(document.querySelector('div').innerHTML);
+
+    textContent:
+    ------------
+        it displays pure text content
+
+        console.log(document.querySelector('div').textContent);
+
+    set element :
+    -----------------
+        suppose i have a h1 tag of id = "heading" it was written previously "hello india" i will set its text to "hello Binod";
+
+        document.querySelector('#myid').innerText = "hello Binod"; // it will assign hello binod in place where it was written hello India,
+
+        console.log(document.querySelector('#myid').innerText); // i am displaying the innertext 
+
+
+    same for innerHTML 
+    code example :
+        document.querySelector('#myid').innerHTML = "<i>hello Binod</i>";
+
+        here we can write html tag to set the value but it couldnot able to do in innerText
+
+
+Practice Question :
+    
+    Q. create a h2 heading element with text "hello javascript".append from "Binod" to this text using javascript 
+    
+    code example:
+        let h2 = document.querySelector('#heading'); 
+        console.log(h2.innerText);
+
+        h2.innerText = h2.innerText + " Binod ";
+
+Q2. Create three div with common class name = "box" access them and add some unique text each of them 
+
+    code example:
+        let div = document.querySelectorAll('.box');
+// div[0].innerText = "New Unique value 1";
+// div[1].innerText = "New Unique value 2";
+// div[2].innerText = "New Unique value 3";
+
+
+let idx = 0;
+for (d of div){
+  d.innerText = `New index value ${idx}`;
+  idx++;
+
+}
+
+
+DOM manupulation attributes :
+--------------------------------
+    attributes :
+
+        getAttribute(attr) // to get the attribute value 
+
+        setAttribute (attr,value) // to set the attribute val th 
+
+    style :
+        node.style
+
+    attribute :
+        <h2 id="heading">Hello javascript</h2>
+        here id is an attribute :
+        if there are some class then the calss is an attribute 
+
+        let image = document.querySelector('#photo');
+        src = image.getAttribute('src');
+        id = image.getAttribute('id');
+        console.log(src);
+        console.log(id)
+
+        console.log(image.src);
+        console.log('------------');
+        console.log(image.id);
+        anc = document.querySelector('#facebookLink');
+        console.log(anc.id);
+    
+    let inp = document.querySelector('#fn');
+    console.log(inp.name);
+
+    console.log(inp.getAttribute('name') = "value");
+
+    set attribute:
+    code example:
+        let inp = document.querySelector('#fn');
+        console.log(inp.name);
+
+        console.log(inp.getAttribute('name'));
+        inp.setAttribute("name","newName");
+
+        console.log(inp.name);
+
+
+    style change the attribute of style :
+    -----------------------------------------
+        in css if we have 
+
+        background-color in js we can write backgroundColor
+        border-radius in js it  borderRadius :
+        it become camelcase 
+
+        code example:
+            let b = document.querySelector('.box');
+            b.style.backgroundColor="red";
+            b.style.borderRadius="30px";
+            let b = document.querySelector('.box');
+            b.style.backgroundColor="red";
+            b.style.borderRadius="30px";
+            b.innerText = "Help";
+            b.style.color="green";
+            b.style.fontSize="28px";
+
+        
+DOM Manupulation :
+    Insert Element :
+    -------------------------
+    node.append(el) // add at the end of node (inside)
+    node.prepend(el) // add at the start of node (inside)
+    node.before(el) // add before the node (outside)
+    node.after(el) // adds after the node (outside)
+
+    i ahve to create a button and i want to add this button at the end of a div dynamically 
+
+    code example:
+    ---------------
+        let newBtn = document.createElement("button"); //button created
+        newBtn.innerText = "click me"; // inner text generated 
+        newBtn.setAttribute('id','btn');
+        console.log(newBtn); // attribute declared 
+
+        let div = document.querySelector('.box');
+        div.append(newBtn); //placed successfully after the node
+
+        div.prepend(newBtn);
+
+        div.before(newBtn);
+
+        div.after(newBtn);
+
+    adding a h1 tag after the div:
+
+    let h1 = document.createElement("h1");
+    h1.innerHTML = "<i>hello JavaScript</i>"
+    div = document.querySelector('body');
+    div.append(h1)            
+     
+
+    to delete a node :
+    -----------------
+    node.remove() // remove the node 
+    let para  = document.querySelector('#para');
+    para.remove();
+
+Learn from MDN document about append child and remove child 
+
+
